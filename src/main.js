@@ -65,11 +65,21 @@ let age = [11,18,19,25,46,20,1];
 let elligible = age.filter(canVote);
 console.log(elligible);
 
-for(let i of age){
-  if(i>=18){
-    console.log(i);
+
+function filterDemo(age){
+  for(let i of age){
+    if(i>=18){
+      console.log(i);
+    }
   }
 }
+
+function display(age, myCallBack){
+  console.log("calling the filterDemo fucntion");
+  myCallBack(age);
+}
+
+display(age, filterDemo);
 
 // reduce fucntion
 function addition(sum, num){
